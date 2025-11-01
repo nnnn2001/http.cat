@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 export default function CatDetail({ cat }) {
   if (!cat) {
@@ -8,10 +9,12 @@ export default function CatDetail({ cat }) {
   return (
     <div className="flex flex-col md:flex-row gap-8">
       <div className="relative w-full md:w-1/2 h-[400px] bg-lime-500 rounded-lg overflow-hidden">
-        <img
+        <Image
           src={cat.url}
           alt={cat.breeds[0].name}
-          className="w-full h-full object-cover"
+          className="object-cover"
+          fill
+          sizes="610px"
         />
       </div>
 
