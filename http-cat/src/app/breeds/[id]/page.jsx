@@ -1,5 +1,5 @@
 import PageContainer from "@/components/common/PageContainer";
-import BreedDetailHeader from "@/components/ui/BreedDetailHeader";
+import BreedDetailHeader from "@/app/breeds/[id]/_components/BreedDetailHeader";
 import CatDetail from "@/components/ui/CatDetail";
 import { getCatById } from "@/lib/services/catApi";
 

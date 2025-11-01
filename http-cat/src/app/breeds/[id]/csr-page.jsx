@@ -1,7 +1,7 @@
 "use client";
 
 import PageContainer from "@/components/common/PageContainer";
-import BreedDetailHeader from "@/components/ui/BreedDetailHeader";
+import BreedDetailHeader from "@/app/breeds/[id]/_components/BreedDetailHeader";
 import CatDetail from "@/components/ui/CatDetail";
 import ErrorDisplay from "@/components/ui/ErrorDisplay";
 import Loading from "@/components/ui/Loading";
@@ -37,7 +37,7 @@ export default function CatBreedPage() {
   if (!cat) return <ErrorDisplay message="고양이 정보를 찾을 수 없습니다" />;
 
   return (
-    <PageContainer title={cat.breeds[0].name }>
+    <PageContainer title={cat.breeds[0].name}>
       <BreedDetailHeader breed={cat.breeds[0]} />
       <CatDetail cat={cat} />
     </PageContainer>
