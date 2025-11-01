@@ -10,9 +10,11 @@ export default function Header() {
 
         <nav>
           <ul className="flex space-x-6">
-            <li>Home</li>
             <li>
-              <Link href="/Breeds">Breeds</Link>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/breeds">Breeds</Link>
             </li>
           </ul>
         </nav>
