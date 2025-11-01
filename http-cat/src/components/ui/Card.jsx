@@ -3,7 +3,7 @@ export default function Card({ children, className = "", imageUrl, name }) {
     <div
       className={`flex flex-col overflow-hidden rounded-lg border border-gray-200 shadow-md hover:shadow-lg transition-shadow ${className}`}
     >
-      <div className="relative h-64 bg-lime-400">
+      <div className="relative h-64 bg-lime-600">
         <img
           src={imageUrl || "/placeholder-cat.jpg"}
           alt={name}
