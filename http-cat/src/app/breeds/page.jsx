@@ -1,16 +1,5 @@
+import { getCatBreeds } from "@/lib/services/catApi";
 import Link from "next/link";
-
-async function getCatBreeds() {
-  const res = await fetch(
-    `https://api.thecatapi.com/v1/breeds?api_key=${process.env.CAT_API_KEY}&limit=8`
-  );
-
-  if (!res.ok) {
-    throw new Error("고양이 품종 데이터를 가져오는 것에 실패했습니다");
-  }
-
-  return res.json();
-}
 
 export default async function CatBreeds() {
   const breeds = await getCatBreeds();
@@ -32,7 +21,7 @@ export default async function CatBreeds() {
                     src={breed.image?.url || "/placeholder-cat.jpg"}
                     alt={breed.name}
                     className="object-cover w-full h-full"
-                  ></img>
+                  />
                 </div>
                 <div className="p-4">
                   <h2 className="text-lg font-semibold">{breed.name}</h2>
