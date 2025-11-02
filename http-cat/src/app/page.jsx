@@ -4,7 +4,7 @@ import Image from "next/image";
 import { getCats } from "@/lib/services/catApi";
 import { getPlaiceholder } from "plaiceholder";
 
-export const revalidate = 5;
+export const dynamic = " force-dynamic";
 
 export default async function Home() {
   console.log("Home");
@@ -13,7 +13,7 @@ export default async function Home() {
   const imageUrl =
     "https://res.cloudinary.com/daljqe0zr/image/upload/img_uhn1py.jpg";
 
-  const response = await fetch(imageUrl, { next: { revalidate: 5 } });
+  const response = await fetch(imageUrl);
   const buffer = await response.arrayBuffer();
 
   const { base64 } = await getPlaiceholder(Buffer.from(buffer));
