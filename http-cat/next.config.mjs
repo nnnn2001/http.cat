@@ -3,7 +3,18 @@ const nextConfig = {
   /* config options here */
   reactCompiler: true,
   images: {
-    domains: ["cdn2.thecatapi.com", "res.cloudinary.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn2.thecatapi.com",
+        pathname: "/**",
+      },
+    ],
     remotePatterns: [
       {
         protocol: "https",
