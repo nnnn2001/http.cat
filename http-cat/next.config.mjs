@@ -14,8 +14,7 @@ const nextConfig = {
         hostname: "cdn2.thecatapi.com",
         pathname: "/**",
       },
-    ],
-    remotePatterns: [
+
       {
         protocol: "https",
         hostname: "example.com",
