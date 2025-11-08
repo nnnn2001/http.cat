@@ -2,6 +2,11 @@ import { getCatBreeds } from "@/lib/services/catApi";
 import Link from "next/link";
 import Image from "next/image";
 
+export const metadata = {
+  title: "고양이 품종리스트",
+  description: "다양한 고양이 품종들을 살펴보세요",
+};
+
 export default async function CatBreeds() {
   const breeds = await getCatBreeds();
 
