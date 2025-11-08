@@ -5,7 +5,7 @@ export async function GET(request, { params }) {
 
   try {
     const catData = await getCatById(id);
-    return Response.json();
+    return Response.json(catData);
   } catch (error) {
     return Response.json(
       { error: "고양이 데이터를 가져오는 것에 실패했습니다" },

@@ -14,7 +14,7 @@ export default function CatBreedPage({ params }) {
   const { id } = useParams;
   const [cat, setCat] = useState(null);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadCat() {
